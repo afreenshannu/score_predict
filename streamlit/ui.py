@@ -15,6 +15,6 @@ if (st.button("Predict")):
         "gender_male": gender
 
     }
-    res = requests.post("http://127.0.0.1:8000/shannu", json=data)
+    res = requests.post("https://score-predict-3.onrender.com/shannu", json=data)
     result = res.json()
     st.write("Here you GO:", result["Predicted_score"])
